@@ -62,3 +62,8 @@
 .glowEffect {
     animation: glow 2.5s infinite;
 }
+
+
+#menu-mobile.active{
+  transform: translateX(0);
+}

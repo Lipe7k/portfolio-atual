@@ -10,11 +10,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
-  
-            <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/x-icon">
           
 </head>
-<body class="bg-gray-800">
+<body class="bg-gray-800 overflow-x-hidden">  
 
   <div class="fixed inset-0 -z-10 pointer-events-none">
         <div class="dot" style="top: 5%; left: 10%; animation-delay: 1s;"></div>
@@ -37,23 +37,46 @@
 
   </div>
 
-  <header class="w-full h-16 bg-gray-900 flex fixed z-10">
-    <nav class="w-full flex items-center justify-around px-5 text-white">
+  <header class="w-full h-16 bg-gray-900 flex z-10 fixed sm:z-10">
+    <nav class="w-full flex items-center justify-between sm:justify-around px-5 text-white">
       <h1 class="text-4xl font-bold">
-        <a href="#falcirolli">Falciro<span class="text-blue-600">lli</span></a>
+        <a href="#falcirolli" class="text-2xl sm:text-4xl">Falciro<span class="text-blue-600">lli</span></a>
       </h1>
-      <ul class="flex items-center gap-6">
+      <ul class="items-center gap-6 hidden sm:flex">
+        <li class="slide hidden sm:block"><a href="#home">Home</a></li>
         <li class="slide hidden sm:block"><a href="#about-me">About me</a></li>
         <li class="slide hidden sm:block"><a href="#projects">Projects</a></li>
         <li class="hover:scale-105 duration-200 ease-out">
-          <a href="" class="bg-blue-700 px-4 py-2 rounded">Contact me</a>
+          <a href="#contact" class="bg-blue-700 px-4 py-2 rounded">Contact me</a>
         </li>
       </ul>
+      <div id="menu-hamburguer" class="flex flex-col gap-1.5 cursor-pointer sm:hidden" onclick="abrirMenu()">
+        <div class="w-7 h-1 bg-white rounded"></div>
+        <div class="w-7 h-1 bg-white rounded"></div>
+        <div class="w-7 h-1 bg-white rounded"></div>
+    </div>
     </nav>
   </header>
 
-  <main class="w-full  sm:pt-0" id="falcirolli">
-    <section class="pt-20 w-full min-h-screen flex justify-center items-center px-5">
+
+
+  <div id="menu-mobile" class="max-w-56 w-full h-auto bg-gray-900 text-white z-30 right-0 top-16 translate-x-full fixed transition-transform duration-300">
+    <div  class="relative w-12 h-12 ml-4 mt-2" onclick="fecharMenu(event)">
+      <div class="w-8 h-1 bg-white -rotate-45 absolute top-6/12 left-0 origin-center"></div>
+      <div class="w-8 h-1 bg-white rotate-45 absolute top-6/12 left-0 origin-center"></div>
+    </div>
+      <ul class="w-full h-screen flex-col text-2xl flex items-end">
+        <li class="mr-4 text-center py-3"><a href="#home">Home</a></li>
+        <li class="mr-4 text-center py-3"><a href="#about-me">About me</a></li>
+        <li class="mr-4 text-center py-3"><a href="#projects">Projects</a></li>
+        <li class="mr-4 text-center py-3">
+          <a href="#contact">Contact me</a>
+        </li>
+      </ul>
+  </div>
+
+  <main class="fecharMenu w-full  sm:pt-0" id="falcirolli" onclick="fecharMenu(event)">
+    <section id="home" class="pt-20 w-full min-h-screen flex justify-center items-center px-5">
       <div class="max-w-7xl w-full flex flex-col md:flex-row gap-12 justify-between items-center text-center md:text-left">
         <div class="flex flex-col items-center md:items-start">
           <div class="text-white mb-3">
@@ -63,7 +86,7 @@
           <p class="text-white opacity-90 mb-5 max-w-md">
             I'm a backend developer passionate about building robust systems and exploring server-side technologies.
           </p>
-          <a href="" class="text-white glowEffect bg-blue-700 px-4 py-2 rounded mb-8 md:px-6 md:py-3">Contact me</a>
+          <a href="#contact" class="text-white glowEffect bg-blue-700 px-4 py-2 rounded mb-8 md:px-6 md:py-3">Contact me</a>
 
           <div class="text-4xl text-white flex gap-4">
             <a href="https://github.com/Lipe7k" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -82,7 +105,7 @@
     </section>
 
     <section class="w-full min-h-screen flex justify-center items-center px-5" id="about-me">
-        <div class="max-w-7xl w-full flex flex-col md:flex-row gap-12 justify-between items-center text-center md:text-left">
+        <div class="max-w-7xl w-full flex flex-col md:flex-row gap-8 justify-between items-center text-center md:text-left">
             <div>
                 <img
                     src="images/keyboard-3d.png"
@@ -99,81 +122,94 @@
 
                 <h4 class="text-xl font-medium mb-3">Skills and technologies</h4>
                 <div class="grid grid-cols-2 gap-4 place-items-center lg:grid-cols-4">
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-css3-plain colored"></i>CSS</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-html5-plain colored"></i>HTML</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-github-original"></i></i>Github</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-javascript-plain colored"></i>Javascript</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-mysql-original colored"></i>MySQL</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-python-plain colored"></i>Python</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition" ><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</div>
+                    <div class="max-w-36 w-full py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-css3-plain colored"></i>CSS</div>
+                    <div class="max-w-36 w-full  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-html5-plain colored"></i>HTML</div>
+                    <div class="max-w-36 w-full  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-github-original"></i></i>Github</div>
+                    <div class="max-w-36 w-full  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-javascript-plain colored"></i>Javascript</div>
+                    <div class="max-w-36 w-full  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-mysql-original colored"></i>MySQL</div>
+                    <div class="max-w-36 w-full  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-python-plain colored"></i>Python</div>
+                    <div class="max-w-36 w-full  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition" ><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</div>
                 </div>
             </div>
         </div>
     </section>
-  <section class="scroll-mt-40 w-full min-h-screen flex flex-col justify-center gap-12 items-center px-5 text-white" id="projects">
-  <h2 class="font-bold text-4xl mb-12 text-center">My Projects</h2>
+  <section class="scroll-mt-12 sm:scroll-mt-30 w-full min-h-screen flex flex-col justify-center gap-8 items-center px-5 text-white" id="projects">
+    <h2 class="font-bold text-4xl my-12 text-center">My Projects</h2>
 
-  <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-5 bg-neutral-900 p-5 rounded-xl">
-    <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
-      <div>
-        <h4 class="font-bold text-3xl mb-4">Chat em tempo real</h4>
-        <p class="opacity-80 mb-4 leading-relaxed text-justify">
-          Lorem ipsum dolor sit amet, c obcaecati dolorem eos harum, soluta ullam esse incidunt pariatur dignissimos! Quae quibusdam quidem nesciunt.
-        </p>
-        <span class="font-medium block mb-4">HTML, CSS, Javascript, Node</span>
+    <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-5 bg-neutral-900 p-5 rounded-xl">
+      <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-2xl sm:text-3xl mb-4">Chat em tempo real</h4>
+          <p class="opacity-80 mb-4 leading-relaxed text-justify">
+            Chat com login para enviar mensagens entre usuários em tempo real.
+          </p>
+          <span class="font-medium block mb-4">HTML, CSS, Javascript, Node</span>
+        </div>
+
+        <div class="text-black flex gap-4 justify-center md:justify-start">
+          <a href="https://chat-em-tempo-real-front.onrender.com" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
+          <a href="https://github.com/Lipe7k/chat-em-tempo-real" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
+        </div>
+      </div>
+      <img src="images/chat-em-tempo-real.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-2">
       </div>
 
-      <div class="text-black flex gap-4 justify-center md:justify-start">
-        <a href="https://chat-em-tempo-real-front.onrender.com" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
-        <a href="https://github.com/Lipe7k/chat-em-tempo-real" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
-      </div>
-    </div>
-    <img src="images/chat-em-tempo-real.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-4">
-    </div>
-
+      
     
-  
 
 
-  <div class="max-w-5xl w-full flex flex-col md:flex-row-reverse items-center gap-5 bg-neutral-900 p-5 rounded-xl">
-    <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
-      <div>
-        <h4 class="font-bold text-3xl mb-4">Employee Dashboard</h4>
-        <p class="opacity-80 mb-4 leading-relaxed text-justify">
-          Lorem ipsum dolor sit amet, c obcaecati dolorem eos harum, soluta ullam esse incidunt pariatur dignissimos! Quae quibusdam quidem nesciunt.
-        </p>
-        <span class="font-medium block mb-4">HTML, CSS, Javascript</span>
+    <div class="max-w-5xl w-full flex flex-col md:flex-row-reverse items-center gap-5 bg-neutral-900 p-5 rounded-xl">
+      <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-2xl sm:text-3xl mb-4">Employee Dashboard</h4>
+          <p class="opacity-80 mb-4 leading-relaxed text-justify">
+            Dashboard para gerenciamento de funcionários, podendo dar aumento ou demiti-lo.</p>
+          <span class="font-medium block mb-4">HTML, CSS, Javascript</span>
+        </div>
+
+        <div class="text-black flex gap-4 justify-center md:justify-start">
+          <a href="https://employee-dashboard-one-xi.vercel.app" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
+          <a href="https://github.com/Lipe7k/employee-dashboard" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
+        </div>
       </div>
 
-      <div class="text-black flex gap-4 justify-center md:justify-start">
-        <a href="https://employee-dashboard-one-xi.vercel.app" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
-        <a href="https://github.com/Lipe7k/employee-dashboard" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
-      </div>
+      <img src="images/employeedashboard.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-2">
     </div>
 
-    <img src="images/employeedashboard.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-4">
-  </div>
+    <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-5 bg-neutral-900 p-5 rounded-xl">
+      <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-2xl sm:text-3xl mb-4">Spotify</h4>
+          <p class="opacity-80 mb-4 leading-relaxed text-justify">
+            Site para ouvir músicas igual o Spotify, podendo adicionar novas músicas usando arquivos MP3.
+          </p>
+          <span class="font-medium block mb-4">HTML, CSS, Javascript</span>
+        </div>
 
-  <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-5 bg-neutral-900 p-5 rounded-xl">
-    <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
-      <div>
-        <h4 class="font-bold text-3xl mb-4">Spotify</h4>
-        <p class="opacity-80 mb-4 leading-relaxed text-justify">
-          Lorem ipsum dolor sit amet, c obcaecati dolorem eos harum, soluta ullam esse incidunt pariatur dignissimos! Quae quibusdam quidem nesciunt.
-        </p>
-        <span class="font-medium block mb-4">HTML, CSS, Javascript</span>
+        <div class="text-black flex gap-4 justify-center md:justify-start">
+          <a href="https://spotify-interface-six.vercel.app" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
+          <a href="https://github.com/Lipe7k/spotify-interface" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
+        </div>
+      </div>
+      <img src="images/spotify.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-2">
       </div>
 
-      <div class="text-black flex gap-4 justify-center md:justify-start">
-        <a href="https://spotify-interface-six.vercel.app" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
-        <a href="https://github.com/Lipe7k/spotify-interface" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
-      </div>
-    </div>
-    <img src="images/spotify.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-4">
-    </div>
-
-</section>
-
+  </section>
   </main>
+  <!-- <footer id="contact" class="w-full h-68 mt-12 flex justify-center items-center">
+    <div>
+      <div>
+        <h3>Github</h3>
+      </div>
+      <div>
+        <h3>Instagram</h3>
+      </div>
+      <div>
+        <h3>Email</h3>
+      </div>
+    </div>
+  </footer> -->
+
+  <script src="src/js/script.js"></script>
 </body>
 </html>
