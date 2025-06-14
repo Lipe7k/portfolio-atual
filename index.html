@@ -44,7 +44,7 @@
       </h1>
       <ul class="flex items-center gap-6">
         <li class="slide hidden sm:block"><a href="#about-me">About me</a></li>
-        <li class="slide hidden sm:block"><a href="">Projects</a></li>
+        <li class="slide hidden sm:block"><a href="#projects">Projects</a></li>
         <li class="hover:scale-105 duration-200 ease-out">
           <a href="" class="bg-blue-700 px-4 py-2 rounded">Contact me</a>
         </li>
@@ -52,8 +52,8 @@
     </nav>
   </header>
 
-  <main class="w-full pt-20 sm:pt-0" id="falcirolli">
-    <section class="w-full min-h-screen flex justify-center items-center px-5">
+  <main class="w-full  sm:pt-0" id="falcirolli">
+    <section class="pt-20 w-full min-h-screen flex justify-center items-center px-5">
       <div class="max-w-7xl w-full flex flex-col md:flex-row gap-12 justify-between items-center text-center md:text-left">
         <div class="flex flex-col items-center md:items-start">
           <div class="text-white mb-3">
@@ -96,18 +96,84 @@
                 <h4 class="text-start font-bold my-2 text-2xl">Who Am I</h4>
                 <p class="text-start mb-5">My name is Felipe Falcirolli, and I'm a backend developer in training, driven by curiosity and a constant desire to learn. Technology attracts me not just because of innovation, but because of the logic behind the solutions — and that’s what brought me into the world of programming.</p>
 
+
+                <h4 class="text-xl font-medium mb-3">Skills and technologies</h4>
                 <div class="grid grid-cols-2 gap-4 place-items-center lg:grid-cols-4">
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-css3-plain colored"></i>CSS</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-html5-plain colored"></i>HTML</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-github-original"></i></i>Github</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-javascript-plain colored"></i>Javascript</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-mysql-original colored"></i>MySQL</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-python-plain colored"></i>Python</div>
-                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-css3-plain colored"></i>CSS</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-html5-plain colored"></i>HTML</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-github-original"></i></i>Github</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-javascript-plain colored"></i>Javascript</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-mysql-original colored"></i>MySQL</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition"><i class="devicon-python-plain colored"></i>Python</div>
+                    <div class="w-36  py-2 bg-neutral-900 text-center rounded flex items-center justify-center gap-2 hover:scale-105 transition" ><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</div>
                 </div>
             </div>
         </div>
     </section>
+  <section class="scroll-mt-40 w-full min-h-screen flex flex-col justify-center gap-12 items-center px-5 text-white" id="projects">
+  <h2 class="font-bold text-4xl mb-12 text-center">My Projects</h2>
+
+  <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-5 bg-neutral-900 p-5 rounded-xl">
+    <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
+      <div>
+        <h4 class="font-bold text-3xl mb-4">Chat em tempo real</h4>
+        <p class="opacity-80 mb-4 leading-relaxed text-justify">
+          Lorem ipsum dolor sit amet, c obcaecati dolorem eos harum, soluta ullam esse incidunt pariatur dignissimos! Quae quibusdam quidem nesciunt.
+        </p>
+        <span class="font-medium block mb-4">HTML, CSS, Javascript, Node</span>
+      </div>
+
+      <div class="text-black flex gap-4 justify-center md:justify-start">
+        <a href="https://chat-em-tempo-real-front.onrender.com" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
+        <a href="https://github.com/Lipe7k/chat-em-tempo-real" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
+      </div>
+    </div>
+    <img src="images/chat-em-tempo-real.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-4">
+    </div>
+
+    
+  
+
+
+  <div class="max-w-5xl w-full flex flex-col md:flex-row-reverse items-center gap-5 bg-neutral-900 p-5 rounded-xl">
+    <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
+      <div>
+        <h4 class="font-bold text-3xl mb-4">Employee Dashboard</h4>
+        <p class="opacity-80 mb-4 leading-relaxed text-justify">
+          Lorem ipsum dolor sit amet, c obcaecati dolorem eos harum, soluta ullam esse incidunt pariatur dignissimos! Quae quibusdam quidem nesciunt.
+        </p>
+        <span class="font-medium block mb-4">HTML, CSS, Javascript</span>
+      </div>
+
+      <div class="text-black flex gap-4 justify-center md:justify-start">
+        <a href="https://employee-dashboard-one-xi.vercel.app" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
+        <a href="https://github.com/Lipe7k/employee-dashboard" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
+      </div>
+    </div>
+
+    <img src="images/employeedashboard.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-4">
+  </div>
+
+  <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-5 bg-neutral-900 p-5 rounded-xl">
+    <div class="flex-1 flex flex-col justify-between h-full text-center md:text-left">
+      <div>
+        <h4 class="font-bold text-3xl mb-4">Spotify</h4>
+        <p class="opacity-80 mb-4 leading-relaxed text-justify">
+          Lorem ipsum dolor sit amet, c obcaecati dolorem eos harum, soluta ullam esse incidunt pariatur dignissimos! Quae quibusdam quidem nesciunt.
+        </p>
+        <span class="font-medium block mb-4">HTML, CSS, Javascript</span>
+      </div>
+
+      <div class="text-black flex gap-4 justify-center md:justify-start">
+        <a href="https://spotify-interface-six.vercel.app" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="fa fa-eye"></i> Deploy</a>
+        <a href="https://github.com/Lipe7k/spotify-interface" target="_blank" class="px-4 py-2 rounded-2xl bg-white hover:scale-105 transition"><i class="devicon-github-original"></i> Github</a>
+      </div>
+    </div>
+    <img src="images/spotify.png" alt="" class="w-full md:w-96 max-w-full object-cover shadow-2xl rounded border-4">
+    </div>
+
+</section>
+
   </main>
 </body>
 </html>
