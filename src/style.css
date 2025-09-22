@@ -5,6 +5,19 @@
    scroll-behavior: smooth;
 }
 
+body{
+  background: linear-gradient(-45deg, #5ea6ca, #10254b, #1d3a6b, #16e48e);
+  background-size: 400% 400%;
+  animation: gradiente 5s ease infinite;
+}
+
+@keyframes gradiente {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 .dot {
   width: 6px;
   height: 6px;
